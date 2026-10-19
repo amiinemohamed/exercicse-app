@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from app.api import ClinicalPredictor
 from core.dataset import Dataset
 from core.logisticRegression import LogisticRegression
