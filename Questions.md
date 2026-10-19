@@ -11,3 +11,15 @@ Pour la séparation des responsabilités.
 - Il n’a besoin ni des données d’entraînement, ni de l’optimiseur.
 - On peut changer d’algorithme ou ré-entraîner sans toucher à l’application clinique.
 - Chaque classe se teste séparément.
+
+### Resultat 
+
+=== LogisticRegression ===
+Évaluation : {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0}
+Patient A [36.7, 1, 98] -> Sain
+Patient B [39.0, 8, 87] -> Infecté
+
+=== NeuralNetwork ===
+Évaluation : {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0}
+Patient A [36.7, 1, 98] -> Sain
+Patient B [39.0, 8, 87] -> Infecté
