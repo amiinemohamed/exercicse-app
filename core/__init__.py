@@ -5,6 +5,7 @@ from core.logisticRegression import LogisticRegression
 from core.model import Model
 from core.neuralNetwork import NeuralNetwork
 from core.optimizer import GradientDescent
+from core.randomForest import RandomForest
 
 __all__ = [
     "Dataset",
@@ -12,4 +13,5 @@ __all__ = [
     "LogisticRegression",
     "Model",
     "NeuralNetwork",
+    "RandomForest",
 ]

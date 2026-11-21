@@ -9,6 +9,7 @@ from core.dataset import Dataset
 from core.logisticRegression import LogisticRegression
 from core.neuralNetwork import NeuralNetwork
 from core.optimizer import GradientDescent
+from core.randomForest import RandomForest
 from pipeline.evaluator import Evaluator
 from pipeline.trainer import Trainer
 
@@ -24,7 +25,7 @@ def main():
     X_train, y_train, X_test, y_test = data.split()
 
     # Le même ClinicalPredictor fonctionne avec n'importe quel modèle
-    for model in (LogisticRegression(), NeuralNetwork()):
+    for model in (LogisticRegression(), NeuralNetwork(), RandomForest()):
         name = type(model).__name__
         trained = Trainer(model, GradientDescent(lr=0.1)).train(X_train, y_train)
         print(f"\n=== {name} ===")
